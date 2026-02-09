@@ -1,3 +1,6 @@
+# Node (local preview)
+node_modules/
+
 # Jekyll build files
 _site/
 .sass-cache/
