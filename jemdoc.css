@@ -72,7 +72,7 @@ pre, tt {
 
 a, a > tt {
 	color: #224b8d;
-	text-decoration: none;
+	text-decoration: underline;
 }
 
 a:hover {
