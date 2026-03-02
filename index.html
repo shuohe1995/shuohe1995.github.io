@@ -113,13 +113,14 @@ Topics:
 
     <div class="work-card" data-topic="llm-agent">
       <div class="work-figures">
+        <img src="publications/rl/hgpo/ill1.png" alt="HGPO">
         <img src="publications/rl/hgpo/hgpo.png" alt="HGPO">
       </div>
       <div class="work-info">
         <p class="work-title">Hierarchy-of-Groups Policy Optimization for Long-Horizon Agentic Tasks</p>
         <p class="work-authors"><b>Shuo He</b>, Lang Feng, Qi Wei, Xin Cheng, Lei Feng<sup>&dagger;</sup>, Bo An</p>
         <p class="work-meta"><b>ICLR 2026</b> &nbsp; <a href="https://openreview.net/pdf?id=T8Dev99qnz">Paper</a> &nbsp; <a href="https://github.com/langfengQ/verl-agent/tree/master/recipe/hgpo">Code</a></p>
-        <p class="work-desc">Hierarchy-of-groups policy optimization for long-horizon agentic tasks.</p>
+        <p class="work-desc">We show that step-wise group-based RL for long-horizon LLM agents can suffer from historical context inconsistency, which severely biases stepwise advantage estimates and harms optimization. Hence, we propose HGPO, which forms multiple hierarchical groups per step based on historical-context consistency and adaptively aggregates their advantage estimates to get a better bias-variance tradeoff without extra models or rollouts.</p>
       </div>
     </div>
 
@@ -129,9 +130,9 @@ Topics:
       </div>
       <div class="work-info">
         <p class="work-title">Online Causal Kalman Filtering for Stable and Effective Policy Optimization</p>
-        <p class="work-authors"><b>Shuo He</b>, Lang Feng, Xin Cheng, Lei Feng, Bo An</p>
-        <p class="work-meta"><b>Preprint</b> &nbsp; <a href="https://arxiv.org/abs/2602.10609">Paper</a></p>
-        <p class="work-desc">Stable and effective policy optimization via online causal Kalman filtering.</p>
+        <p class="work-authors"><b>Shuo He</b>, Lang Feng, Xin Cheng, Lei Feng<sup>&dagger;</sup>, Bo An</p>
+        <p class="work-meta"><b>Preprint</b> &nbsp; <a href="https://arxiv.org/abs/2602.10609">Paper</a>&nbsp; <a href="https://github.com/shuohe1995/verl-kpo">Code</a></p>
+        <p class="work-desc">We make LLM policy training more stable by using an online causal Kalman filter to smooth noisy token-level importance ratios across a sequence, which gives steadier updates and better results on challenging math reasoning tasks.</p>
       </div>
     </div>
 
@@ -143,18 +144,19 @@ Topics:
         <p class="work-title">Dr. MAS: Stable Reinforcement Learning for Multi-Agent LLM Systems</p>
         <p class="work-authors">Lang Feng, Longtao Zheng, <b>Shuo He</b>, Fuxiang Zhang, Bo An</p>
         <p class="work-meta"><b>Preprint</b> &nbsp; <a href="https://arxiv.org/pdf/2602.08847">Paper</a>&nbsp; <a href="https://github.com/langfengQ/DrMAS">Code</a></p>
-        <p class="work-desc">Stable reinforcement learning for multi-agent LLM systems.</p>
+        <p class="work-desc">We show that multi-agent LLM RL becomes unstable when we use one global normalization for all agents, and we fix it with Dr. MAS by normalizing each agent’s advantages using its own reward statistics, which stabilizes training and improves results on multi-agent math and search tasks.</p>
       </div>
     </div>
 
     <div class="work-card" data-topic="ai-safety">
       <div class="work-figures">
-        <img src="publications/safety/RVPT/rvpt.png" alt="RVPT">
+        <img src="publications/safety/RVPT/rvpt.png" alt="RVPT" style="height: 80%">
       </div>
       <div class="work-info">
         <p class="work-title">Defending Multimodal Backdoored Models by Repulsive Visual Prompt Tuning</p>
         <p class="work-authors">Zhifang Zhang, <b>Shuo He</b><sup>&dagger;</sup>, Haobo Wang, Bingquan Shen, Lei Feng<sup>&dagger;</sup></p>
-        <p class="work-meta"><b>NeurIPS 2025</b> &nbsp; <a href="https://openreview.net/forum?id=KkONOZwvSU&referrer=%5BAuthor%20Console%5D(%2Fgroup%3Fid%3DNeurIPS.cc%2F2025%2FConference%2FAuthors%23your-submissions)">Paper</a> &nbsp; <a href="https://github.com/zhangzf01/RVPT">Code</a></p>
+        <p class="work-meta"><b>NeurIPS 2025</b> &nbsp; <a href="https://openreview.net/pdf?id=KkONOZwvSU">Paper</a> &nbsp; <a href="https://github.com/zhangzf01/RVPT">Code</a></p>
+        <p class="work-desc">We defend backdoored multimodal models like CLIP by using Repulsive Visual Prompt Tuning (RVPT), which tunes only small visual prompts on a few clean samples and uses a feature-repelling loss to make the model ignore trigger features, reducing attack success from 89.70% to 2.76% and generalizing across datasets.</p>
       </div>
     </div>
     <div class="work-card" data-topic="ai-safety">
@@ -165,6 +167,7 @@ Topics:
         <p class="work-title">BDetCLIP: Multimodal Prompting Contrastive Test-Time Backdoor Detection</p>
         <p class="work-authors">Yuwei Niu<sup>*</sup>, <b>Shuo He</b><sup>*</sup>, Qi Wei, Feng Liu, Lei Feng</p>
         <p class="work-meta"><b>ICML 2025</b> &nbsp; <a href="https://arxiv.org/pdf/2405.15269">Paper</a> &nbsp; <a href="https://github.com/Purshow/BDetCLIP">Code</a></p>
+        <p class="work-desc">We propose BDetCLIP, a fast test-time method that detects backdoored CLIP inputs by using contrastive prompts and checking that backdoored images stay almost unchanged when we change the class text.</p>
       </div>
     </div>
     <div class="work-card" data-topic="ai-safety">
@@ -175,6 +178,7 @@ Topics:
         <p class="work-title">A Closer Look at Backdoor Attacks on CLIP</p>
         <p class="work-authors"><b>Shuo He</b>, Zhifang Zhang, Feng Liu, Roy Ka-Wei Lee, Bo An, Lei Feng</p>
         <p class="work-meta"><b>ICML 2025</b> &nbsp; <a href="https://proceedings.mlr.press/v267/he25v.html">Paper</a> &nbsp; <a href="https://github.com/shuohe1995/Decomposition-Backdoor-CLIP">Code</a></p>
+        <p class="work-desc">We study how backdoor attacks change CLIP by breaking image features into patches, attention heads, and MLPs, we find different attacks infect different parts of the model, and we use these findings to detect and repair infected parts (or filter suspicious samples) at inference time.</p>
       </div>
     </div>
     <div class="work-card" data-topic="ml">
@@ -192,6 +196,7 @@ Topics:
         <p class="work-title">Influence-Based Fair Selection for Sample-Discriminative Backdoor Attack</p>
         <p class="work-authors">Qi Wei, <b>Shuo He</b>, Enneng Yang, Tingcong Liu, Haobo Wang, Lei Feng, Bo An</p>
         <p class="work-meta"><b>AAAI 2025</b> (Oral) &nbsp; <a href="https://ojs.aaai.org/index.php/AAAI/article/view/35449">Paper</a></p>
+        <p class="work-desc">We find that when triggers are very small, sample-discriminative backdoor attacks pick poisoned samples unfairly across classes and get uneven success, so we propose IFS that uses influence scores with efficient pruning and class-aware thresholds to select high-impact but class-balanced poisoned samples, improving attack success on four datasets.</p>
       </div>
     </div>
     <div class="work-card" data-topic="ml">
