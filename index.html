@@ -96,7 +96,12 @@ I am currently working at the <a href="https://github.com/meituan-longcat/LongCa
 <br/>
 <br/>
 
-My current research interests focus on exploring agentic reinforcement learning techniques for training LLM-based agents deployed in real-world long-horizon agentic applications.
+My current research interests focus on exploring agentic reinforcement learning techniques for training LLM-based agents deployed in real-world long-horizon agentic applications, particularly in the following areas:
+<ul>
+  <li>Designing effective and efficient credit-assignment algorithms for long-horizon agentic RL</li>
+  <li>Developing scalable, self-improving data-synthesis pipelines for challenging long-horizon agentic environments</li>
+  <li>Stabilizing and scaling agentic RL for industrial-scale Pro and Flash models</li>
+</ul>
 
 <h2>Publications and Preprints</h2>
 <p class="subtitle pub-filter">
@@ -109,6 +114,54 @@ Topics:
 </p>
 
   <div id="pub-list" class="work-cards">
+
+  <div class="work-card" data-topic="llm-agent">
+      <div class="work-figures">
+        <img src="publications/pr/longcat-deepresearch/result.png" alt="longcat-deepresearch">
+      </div>
+      <div class="work-info">
+        <p class="work-title">LongCat-DeepResearch Technical Report</p>
+        <p class="work-authors">Meituan Longcat Team</p>
+        <p class="work-meta"><a href="https://huggingface.co/papers/2609.36071">Paper</a> &nbsp; <a href="https://github.com/meituan-longcat/LongCat-DeepResearch">Code</a> &nbsp; <a href="https://meituan-longcat.github.io/LongCat-DeepResearch">Blog</a> </p>
+        <p class="work-desc">We present LongCat-DeepResearch, a multi-agent deep research system that separates global planning from parallel section-level investigation and targeted revision, enabling comprehensive, evidence-grounded reports while achieving strong results across several deep research benchmarks.</p>
+      </div>
+    </div>
+
+  <div class="work-card" data-topic="llm-agent">
+      <div class="work-figures">
+        <img src="publications/rl/nopo/framework.png" alt="NOPO">
+      </div>
+      <div class="work-info">
+        <p class="work-title">Negative-Only Policy Optimization for One-Sided Verifiable Rewards</p>
+        <p class="work-authors">Jiacheng Xu, <b>Shuo He</b>, Fuxiang Zhang, Chaojie Wang, Bo An</p>
+        <p class="work-meta"><b>Neurips 2026</b> &nbsp; <a href="https://openreview.net/pdf?id=RpadYP6yxY">Paper</a></p>
+        <p class="work-desc">We show that standard RLVR becomes unreliable when verifiers can confidently detect failures but cannot confirm correctness, and we address this with NOPO by suppressing only trusted negative samples while treating non-falsified candidates as unlabeled, improving code, logic, and math performance under imperfect verification.</p>
+      </div>
+    </div>
+
+  <div class="work-card" data-topic="llm-agent">
+      <div class="work-figures">
+        <img src="publications/rl/dr.mas/dr.mas.png" alt="DR-MAS">
+      </div>
+      <div class="work-info">
+        <p class="work-title">Dr. MAS: Stable Reinforcement Learning for Multi-Agent LLM Systems</p>
+        <p class="work-authors">Lang Feng, Longtao Zheng, <b>Shuo He</b>, Fuxiang Zhang, Bo An</p>
+        <p class="work-meta"><b>Neurips 2026</b> &nbsp; <a href="https://arxiv.org/pdf/2602.08847">Paper</a>&nbsp; <a href="https://github.com/langfengQ/DrMAS">Code</a></p>
+        <p class="work-desc">We show that multi-agent LLM RL becomes unstable when we use one global normalization for all agents, and we fix it with Dr. MAS by normalizing each agent’s advantages using its own reward statistics, which stabilizes training and improves results on multi-agent math and search tasks.</p>
+      </div>
+    </div>
+
+    <div class="work-card" data-topic="llm-agent">
+      <div class="work-figures">
+        <img src="publications/rl/aawm/framework.png" alt="aawm">
+      </div>
+      <div class="work-info">
+        <p class="work-title">Beyond Next-Observation Prediction: Agent-Authored World Modeling for Sequential Decision Making</p>
+        <p class="work-authors">Guangfeng Cai, Kaibing Yang, <b>Shuo He</b>, Yu Li, Shengtian Yang, Jiaqi Lv, Lei Feng</p>
+        <p class="work-meta"><b>EMNLP 2026</b> &nbsp; <a href="https://arxiv.org/pdf/2606.25421">Paper</a></p>
+        <p class="work-desc">We show that next-observation prediction may overlook the dynamics most relevant to an agent’s decisions, and we address this with AAWM by letting the agent identify its own information needs and synthesize relevant evidence across trajectories into decision-aware training targets, improving world modeling across multiple environments and training settings.</p>
+      </div>
+    </div>
 
     <div class="work-card" data-topic="llm-agent">
       <div class="work-figures">
@@ -157,18 +210,6 @@ Topics:
         <p class="work-authors"><b>Shuo He</b>, Lang Feng, Xin Cheng, Lei Feng<sup>&dagger;</sup>, Bo An</p>
         <p class="work-meta"><b>Preprint</b> &nbsp; <a href="https://arxiv.org/abs/2602.10609">Paper</a>&nbsp; <a href="https://github.com/shuohe1995/verl-kpo">Code</a></p>
         <p class="work-desc">We make LLM policy training more stable by using an online causal Kalman filter to smooth noisy token-level importance ratios across a sequence, which gives steadier updates and better results on challenging math reasoning tasks.</p>
-      </div>
-    </div>
-
-    <div class="work-card" data-topic="llm-agent">
-      <div class="work-figures">
-        <img src="publications/rl/dr.mas/dr.mas.png" alt="DR-MAS">
-      </div>
-      <div class="work-info">
-        <p class="work-title">Dr. MAS: Stable Reinforcement Learning for Multi-Agent LLM Systems</p>
-        <p class="work-authors">Lang Feng, Longtao Zheng, <b>Shuo He</b>, Fuxiang Zhang, Bo An</p>
-        <p class="work-meta"><b>Preprint</b> &nbsp; <a href="https://arxiv.org/pdf/2602.08847">Paper</a>&nbsp; <a href="https://github.com/langfengQ/DrMAS">Code</a></p>
-        <p class="work-desc">We show that multi-agent LLM RL becomes unstable when we use one global normalization for all agents, and we fix it with Dr. MAS by normalizing each agent’s advantages using its own reward statistics, which stabilizes training and improves results on multi-agent math and search tasks.</p>
       </div>
     </div>
 
